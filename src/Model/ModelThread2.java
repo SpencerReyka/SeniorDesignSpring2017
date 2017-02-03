@@ -3,6 +3,7 @@ package Model;
 /**
  * Created by Dartyx on 12/25/2016.
  */
+//can probably delete all of this, ayy lmao was just to make sure i wasnt crazy
 public class ModelThread2 implements Runnable {
     private Thread thread;
     private String title;

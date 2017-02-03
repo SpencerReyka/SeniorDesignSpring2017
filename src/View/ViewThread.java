@@ -1,15 +1,19 @@
 package View;
 
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * Created by Dartyx on 12/25/2016.
  */
-public class ViewThread implements Runnable {
+public class ViewThread extends JFrame implements Runnable {
 
     //private ViewRender
     private Thread viewThread;
 
     @Override
     public void run() {
+        JFrame frame = new JFrame("thisFrame");
 
     }
 
