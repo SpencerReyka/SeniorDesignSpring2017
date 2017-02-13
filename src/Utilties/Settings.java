@@ -22,9 +22,16 @@ public class Settings {
     public static int NW = 135;
     public static int West = 135;
     public static int East = 135;
-    // adjustable keys
-    public static int UP = 119;
-    public static int DOWN = 115;
+    //p1 adjustable keys
+    public static int P1_UP = 104;
+    public static int P1_DOWN = 98;
+    public static int P1_LEFT = 97;
+    public static int P1_RIGHT = 100;
+    //p2 adjustable keys
+    public static int P2_UP = 105;
+    public static int P2_DOWN = 106;
+    public static int P2_LEFT = 107;
+    public static int P2_RIGHT = 108;
 
     // end adjustable keys
 

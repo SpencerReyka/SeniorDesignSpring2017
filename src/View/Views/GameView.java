@@ -12,20 +12,47 @@ import java.awt.*;
 public class GameView implements Render {
     private String[] options = {"Create New Game", "Load Game", "Exit Game"};
     int width,height;
-    Curs cursor;
-    public GameView(Curs cursor){
+    Curs p1,p2;
+    int dim = 10;
+    int w;
+    int h;
+    public GameView(Curs p1, Curs p2){
         width = Settings.GAMEWIDTH;
         height = Settings.GAMEHEIGHT;
-        this.cursor = cursor;
+        this.p1 = p1;
+        this.p2 = p2;
+        w = width/(dim+1);
+        h = height/(dim+1);
     }
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.WHITE);
+
+        for(int i=0;i<dim;i++) {
+            for(int j=0;j<dim;j++){
+                if(p1.check(i,j)){
+                    //paint p1
+                    g.setColor(Color.RED);
+                    draw(i,j,g);
+                    //g.drawRect(w/dim+1,h/dim+1,h,w);
+                }
+                else if(p2.check(i,j)) {
+                    g.setColor(Color.GREEN);
+                    draw(i,j,g);
+                    //paint p2
+                }
+                else{
+                    g.setColor(Color.BLACK);
+                    draw(i,j,g);
+                    //paint square
+                }
+            }
+        }
+        /*g.setColor(Color.BLUE);
         g.drawRect(0,0,width,height);
         g.setFont(new Font("HelveticaNeueLT Pro 55 Roman", Font.PLAIN, 65));
         FontMetrics fm = g.getFontMetrics();
-        int totalWidth = (fm.stringWidth("Domesticated Hurricanes"));
-        g.drawString("Domesticated Hurricanes",(width - totalWidth) / 2,height/6);
+        int totalWidth = (fm.stringWidth("Papa DJ's Wild Ride"));
+        g.drawString("Papa DJ's Wild Ride",(width - totalWidth) / 2,height/6);
 
 
         for(int i=0;i<3;i++){
@@ -47,9 +74,12 @@ public class GameView implements Render {
             }
             g.drawString(options[i], x, y);
 
-        }
+        }*/
 
 
+    }
+    public void draw(int i, int j, Graphics g){
+        g.fillRect(w/(dim+1)*(i+1)+w*i,h/(dim+1)*(j+1)+h*j,w,h);
     }
 }
 

@@ -20,6 +20,7 @@ public class Listener implements KeyListener {
         if(e.getKeyCode()==key){
             //System.out.println("action 1");
             //keyPressed = true;
+            System.out.println("something");
             action.execute();
         }
     }
