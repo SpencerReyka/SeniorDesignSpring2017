@@ -1,5 +1,7 @@
 package Utilties;
 
+import java.awt.event.KeyEvent;
+
 /**
  * Created by Dartyx on 2/2/2017.
  */
@@ -23,15 +25,15 @@ public class Settings {
     public static int West = 135;
     public static int East = 135;
     //p1 adjustable keys
-    public static int P1_UP = 104;
-    public static int P1_DOWN = 98;
-    public static int P1_LEFT = 97;
-    public static int P1_RIGHT = 100;
+    public static int P1_UP = KeyEvent.VK_W;
+    public static int P1_DOWN = KeyEvent.VK_S;
+    public static int P1_LEFT = KeyEvent.VK_A;
+    public static int P1_RIGHT = KeyEvent.VK_D;
     //p2 adjustable keys
-    public static int P2_UP = 105;
-    public static int P2_DOWN = 106;
-    public static int P2_LEFT = 107;
-    public static int P2_RIGHT = 108;
+    public static int P2_UP = KeyEvent.VK_I;
+    public static int P2_DOWN = KeyEvent.VK_K;
+    public static int P2_LEFT = KeyEvent.VK_J;
+    public static int P2_RIGHT = KeyEvent.VK_L;
 
     // end adjustable keys
 

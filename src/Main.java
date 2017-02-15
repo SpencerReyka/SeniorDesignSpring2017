@@ -15,8 +15,6 @@ public class Main {
     public static void main(String[] args){
         Thread.currentThread().setName("Main Thread");
 
-        JFrame jFrame = new JFrame();
-
         //create gamestate
         GameState gameState = new GameState();
         GameScreen gameScreen = new GameScreen();
@@ -27,7 +25,8 @@ public class Main {
         //create ModelThread
         ModelThread modelThread = new ModelThread();
         GameController gameController = new GameController(gameState,viewThread);
-        viewThread.startVisibility();
+        gameController.addToJframe();
+        //viewThread.startVisibility();
         //start threads
         modelThread.start();
         viewThread.start();

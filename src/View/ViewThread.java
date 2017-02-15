@@ -10,13 +10,14 @@ import java.awt.image.BufferStrategy;
 /**
  * Created by Dartyx on 12/25/2016.
  */
-public class ViewThread extends JFrame implements Runnable {
+public class ViewThread implements Runnable {
 
     //private ViewRender
     private Thread viewThread;
     private BufferStrategy bs;
     private Graphics g;
-
+    JFrame jFrame;
+    //private Canvas canvas;
     public GameScreen getGameScreen() {
         return gameScreen;
     }
@@ -31,7 +32,8 @@ public class ViewThread extends JFrame implements Runnable {
     private GameState gameState;//come back through and clean this shit up
     public ViewThread(GameScreen gameScreen, GameState gameState){
             this.gameScreen = gameScreen;
-            this.canvas = gameScreen.canvas;
+            this.canvas = gameScreen.getCanvas();
+            this.jFrame = gameScreen.getFrame();
             //gameScreen.setVisible(true);
             this.gameState = gameState;
     }
@@ -90,6 +92,6 @@ public class ViewThread extends JFrame implements Runnable {
 
     }
     public void startVisibility(){
-        gameScreen.setVisible(true);
+        //gameScreen.setVisible(true);
     }
 }

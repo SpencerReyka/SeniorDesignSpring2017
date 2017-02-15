@@ -14,13 +14,13 @@ public class Curs {
        //cursor+=x;
     //}
     public void up(){
-        if(y-1>0)y--;
+        if(y-1>=0)y--;
     }
     public void down(){
         if(y+1<10)y++;
     }
     public void left(){
-        if(x-1>0)x--;
+        if(x-1>=0)x--;
     }
     public void right(){
         if(x+1<10)x++;
