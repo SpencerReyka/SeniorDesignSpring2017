@@ -54,7 +54,7 @@ public class ModelThread2 implements Runnable {
         }
     }
 
-    @Override
+
     public void run(){
         // Initialize the game
         init();

@@ -17,13 +17,13 @@ public class Curs {
         if(y-1>=0)y--;
     }
     public void down(){
-        if(y+1<10)y++;
+        if(y+1<100)y++;
     }
     public void left(){
         if(x-1>=0)x--;
     }
     public void right(){
-        if(x+1<10)x++;
+        if(x+1<100)x++;
     }
     public boolean check(int x, int y){
         if(this.x == x && this.y == y)return true;

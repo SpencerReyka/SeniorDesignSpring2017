@@ -37,7 +37,7 @@ public class ViewThread implements Runnable {
             //gameScreen.setVisible(true);
             this.gameState = gameState;
     }
-    @Override
+
     public void run() {
 
         while(true){

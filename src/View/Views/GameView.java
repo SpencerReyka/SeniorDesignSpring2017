@@ -13,7 +13,7 @@ public class GameView implements Render {
     private String[] options = {"Create New Game", "Load Game", "Exit Game"};
     int width,height;
     Curs p1,p2;
-    int dim = 10;
+    int dim = 15;
     int w;
     int h;
     public GameView(Curs p1, Curs p2){
